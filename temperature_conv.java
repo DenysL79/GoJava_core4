@@ -11,22 +11,23 @@ public class temperature_conv {
         System.out.println("Enter 1. Fahrenheit to Celsius:");
         System.out.println("Enter 2. Celsius To Fahrenheit:");
         int input = scanner.nextInt();
+        double celsius;
+        double fahrenheit;
 
+        switch (input){
+            case 1: input = 1;
+                System.out.println("Please enter temperature in Farenheit: ");
+                fahrenheit = scanner.nextDouble();
+                celsius = (5.0/9.0) * (fahrenheit - 32);
+                System.out.println("Temperature in Celsius is : " + celsius);
+                break;
 
-        if (input == 1){
-            System.out.println("Please enter temperature in Farenheit: ");
-            double fahrenheit = scanner.nextDouble();
-            double celsius = (5.0/9.0) * (fahrenheit - 32);
-            System.out.println("Temperature in Celsius is : " + celsius);
+            case 2: input = 2;
+                System.out.print("Please enter temperature in Celsius : ");
+                celsius = scanner.nextDouble();
+                fahrenheit = (9.0/5.0)*celsius + 32;
+                System.out.println("Temperature in Fahrenheit is : " + fahrenheit);
+                break;
         }
-
-        if (input == 2){
-            System.out.print("Please enter temperature in Celsius : ");
-            double celsius = scanner.nextDouble();
-            double fahrenheit = (9.0/5.0)*celsius + 32;
-            System.out.println("Temperature in Fahrenheit is : " + fahrenheit);
-
-        }
-
     }
 }
